@@ -1,6 +1,6 @@
 from perspectiveAPI import EvaluationMode, PerspectiveAPI
 
-with open("saurav/datasets/original/porn.txt", "r+", encoding="utf8") as infile:
+with open("datasets/original/porn.txt", "r+", encoding="utf8") as infile:
     counter = 0
     api = PerspectiveAPI()
 

@@ -2,9 +2,8 @@ import pandas as pd
 from perspectiveAPI import EvaluationMode, PerspectiveAPI
 from tqdm import tqdm
 import warnings
+
 warnings.simplefilter(action='ignore', category=FutureWarning)
-
-
 
 # Load files and select top 100 based on scores
 files = ["abuse", "porn", "spam"]
@@ -20,7 +19,7 @@ for file in files:
     print(orig_scores.shape)
 
     for index in tqdm(range(orig_scores.shape[0])):
-    # for index, row in orig_scores.iterrows():
+        # for index, row in orig_scores.iterrows():
         # print(row)
         row = orig_scores.iloc[[index]].to_dict(orient='records')[0]
         line, score = row["text"], row["score"]

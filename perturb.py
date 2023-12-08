@@ -91,7 +91,7 @@ if __name__ == '__main__':
     # print(abuse_df)
     pert.runner(abuse_df)
     result = pert.get()
-    result.to_csv("datasets/perturbed/abuse.csv", index=False)
+    # result.to_csv("datasets/perturbed/abuse.csv", index=False)
 
     # Spam Perturbation
     spam_df = pd.read_csv("datasets/original/spam.csv", encoding="ISO-8859-1")
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     # print(spam_df)
     pert.runner(spam_df)
     result = pert.get()
-    result.to_csv("datasets/perturbed/spam.csv", index=False)
+    # result.to_csv("datasets/perturbed/spam.csv", index=False)
 
     # Porn Perturbation
     porn_df = pd.DataFrame(columns=["class", "tweet"])
@@ -121,5 +121,5 @@ if __name__ == '__main__':
     # print(porn_df)
     pert.runner(porn_df)
     result = pert.get()
-    result.to_csv("datasets/perturbed/porn.csv", index=False)
+    # result.to_csv("datasets/perturbed/porn.csv", index=False)
 
